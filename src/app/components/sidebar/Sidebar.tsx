@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   ChevronDown,
   ChevronRight,
   LayoutDashboard,
-//   Folder,
+  //   Folder,
   Settings,
 } from "lucide-react";
 import Link from "next/link";
@@ -20,6 +21,9 @@ const menu = [
       { label: "Tasks", href: "/tasks" },
       { label: "Dashboard", href: "/dashboard" },
       { label: "Projects", href: "/projects" },
+      { label: "Docs", href: "/docs" },
+      { label: "Resources", href: "/resources" },
+      { label: "Form builder", href: "/form-builder" },
     ],
   },
   {
@@ -46,12 +50,21 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-64 bg-neutral-900 border-r border-neutral-800 h-full overflow-y-auto p-4">
+    <aside className="w-60 bg-[#202020] border border-neutral-700 overflow-y-auto z-50 py-10 p-4">
+      <div className="flex items-center justify-center mb-10 gap-3">
+        <Image
+          src="/FPM-logo.svg"
+          width={25}
+          height={25}
+          alt="Picture of the author"
+        />
+        <h3 className="font-semibold text-sm p-1 text-emerald-500 leading-4 border">FPM</h3>
+      </div>
       {menu.map((section) => (
         <div key={section.title} className="mb-4">
           <button
             onClick={() => toggleSection(section.title)}
-            className="flex items-center justify-between w-full px-2 py-1.5 text-sm font-medium text-zinc-300 hover:bg-neutral-800 rounded"
+            className="flex items-center justify-between w-full px-2 py-1.5 text-[14px] font-semibold text-neutral-500 hover:bg-neutral-800 rounded"
           >
             <div className="flex items-center gap-2">
               {section.icon}
@@ -59,19 +72,19 @@ export default function Sidebar() {
             </div>
             {openSections[section.title] ? (
               <ChevronDown className="w-4 h-4" />
-            ) : (
+            ) : ( 
               <ChevronRight className="w-4 h-4" />
             )}
           </button>
 
           {openSections[section.title] && (
-            <ul className="pl-6 mt-2 space-y-1">
+            <ul className="pl-3 mt-2 space-y-1">
               {section.items.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
                     className={clsx(
-                      "block px-2 py-1.5 text-sm text-zinc-400 rounded hover:bg-neutral-800 hover:text-white",
+                      "block px-2 py-1.5 text-[14px] font-semibold text-neutral-500 rounded hover:bg-neutral-800 hover:text-white"
                       // TODO: Add logic to highlight active page
                     )}
                   >

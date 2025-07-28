@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Image from "next/image";
+// import Image from "next/image";
 import "./styles/globals.css";
-import Sidebar from "./dashboard/components/sidebar/Sidebar";
+import Sidebar from "./components/sidebar/Sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Forzhen Studios' project manager software built and used in house",
 };
 
-const currentYear: number = new Date().getFullYear();
+// const currentYear: number = new Date().getFullYear();
 
 export default function RootLayout({
   children,
@@ -32,23 +32,23 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="w-full p-4 bg-neutral-900">
+        {/* <header className="w-full bg-[#202020] p-2">
           <Image
             src="/FPM-logo.svg"
             width={25}
             height={25}
             alt="Picture of the author"
           />
-        </header>
+        </header> */}
 
-        <div className="flex h-screen overflow-hidden">
+        <div className="flex h-screen">
           <Sidebar />
-          <main className="flex-1 overflow-y-auto p-6">{children}</main>
+          <main className="flex-1 overflow-y-auto p-4">{children}</main>
         </div>
-
+{/* 
         <footer className="flex justify-center text-zinc-700">
           <p>&copy; {currentYear} Forzhen Project Manager — rights reserved</p>
-        </footer>
+        </footer> */}
       </body>
     </html>
   );
