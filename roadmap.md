@@ -6,7 +6,12 @@
 
 ## Post MVP
 5. Team member profiles
-6. Form builder (like a google forms meet typeform).
-4. Dashboard
-7. CRM
-8. Built in text document, and presentation apps.
+6. Role base app use
+7. Form builder (like a google forms meet typeform).
+8. Dashboard
+9. CRM
+10. Built in text document, and presentation apps.
+11. Block style editing (https://www.remirror.io/)
+12. Drag and drop (https://dndkit.com/)
+13. Chat feature like slack, discord
+14. ...
