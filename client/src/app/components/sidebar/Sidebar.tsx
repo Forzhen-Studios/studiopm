@@ -19,7 +19,6 @@ const menu = [
     items: [
       { label: "Home", href: "/home" },
       { label: "Tasks", href: "/tasks" },
-      { label: "Dashboard", href: "/dashboard" },
       { label: "Projects", href: "/projects" },
       { label: "Docs", href: "/docs" },
       { label: "Resources", href: "/resources" },
