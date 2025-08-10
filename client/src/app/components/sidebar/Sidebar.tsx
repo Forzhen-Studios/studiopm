@@ -6,7 +6,7 @@ import {
   ChevronDown,
   ChevronRight,
   LayoutDashboard,
-  //   Folder,
+    // Folder,
   Settings,
 } from "lucide-react";
 import Link from "next/link";
@@ -17,7 +17,7 @@ const menu = [
     title: "Workspace",
     icon: <LayoutDashboard className="w-4 h-4" />,
     items: [
-      { label: "Home", href: "/home" },
+      { label: "Dashboard", href: "/dashboard" },
       { label: "Tasks", href: "/tasks" },
       { label: "Projects", href: "/projects" },
       { label: "Docs", href: "/docs" },
